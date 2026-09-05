@@ -3,8 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Software Engineering for Pre-Trained Models — James Davis, Purdue University</title>
+<title>Software Engineering for Pre-Trained Models &middot; Duality Lab</title>
 <meta name="description" content="What changes about software engineering when the reused component is a learned model?">
+<meta name="author" content="James C. Davis">
 <link rel="canonical" href="https://davisjam.github.io/software-engineering-pre-trained-models/">
 <meta property="og:title" content="Software Engineering for Pre-Trained Models">
 <meta property="og:description" content="What changes about software engineering when the reused component is a learned model?">
@@ -13,13 +14,21 @@
 <link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
-<div class="wrap">
 <header class="masthead">
-  <div class="who"><a href="https://davisjam.github.io/">James Davis, PhD</a></div>
-  <div class="role">Assistant Professor, Elmore Family School of Electrical and Computer
-    Engineering, Purdue University</div>
-  <nav><a href="https://davisjam.github.io/">Home</a><a href="https://davisjam.github.io/research/" aria-current="page">Research</a><a href="https://davisjam.github.io/publications/">Publications</a><a href="https://davisjam.github.io/teaching/">Teaching</a><a href="https://davisjam.github.io/service/">Service</a><a href="https://davisjam.github.io/about/">About me</a></nav>
+  <div class="masthead__inner">
+    <a class="masthead__logo" href="https://davisjam.github.io/">
+      <img src="assets/logo-v2.png" alt="Duality Lab"></a>
+    <nav><a href="https://davisjam.github.io/">Home</a><span class="crumb"><a href="https://davisjam.github.io/research/">Research</a><span class="sep">&rsaquo;</span><span class="here">PTMs</span></span><a href="https://davisjam.github.io/publications/">Publications</a><a href="https://davisjam.github.io/teaching/">Teaching</a><a href="https://davisjam.github.io/service/">Service</a><a href="https://davisjam.github.io/about/">About</a></nav>
+  </div>
 </header>
+<div class="shell">
+<aside class="rail">
+  <img class="avatar" src="assets/JamesDavis.jpg" alt="James Davis">
+  <p class="name">James Davis, PhD</p>
+  <p class="role">Assistant Professor,<br>ECE&#64;Purdue</p>
+  <ul><li><a href="mailto:davisjam@purdue.edu">Email</a></li><li><a href="https://scholar.google.com/citations?user=iVjLBTsAAAAJ">Google Scholar</a></li><li><a href="https://github.com/davisjam">GitHub</a></li><li><a href="https://davisjam.github.io/files/JamesDavis-CV.pdf">CV</a></li></ul>
+</aside>
+<main class="main">
 <h1>Software Engineering for Pre-Trained Models</h1>
 <p class="lede">What changes about software engineering when the reused component is a learned model?</p>
 <p>Developers increasingly build systems on models they did not train, obtained from public registries. A pre-trained model behaves like a dependency in some respects and unlike one in others: its interface is underspecified, its provenance is often unclear, its behaviour changes when it is retrained, and the file itself may execute code when loaded.</p>
@@ -37,30 +46,34 @@
 <div class="bib">
 <div class="yr">2025</div>
 <div class="e">
-<div class="ti">PickleBall: Secure Deserialization of Pickle-based Machine Learning Models<span class="award">Best Artifact</span></div>
+<div class="ti">PickleBall: Secure Deserialization of Pickle-based Machine Learning Models<span class="award">best artifact</span></div>
 <div class="vn">Proceedings of the 32nd ACM Conference on Computer and Communications Security (CCS)</div>
 <div class="note">Model serialization is an integration property. A format that executes code when loaded makes deserialization part of the reuse contract.</div>
-<div class="ln"><a href="https://zenodo.org/records/16974645">Artifact</a><a href="https://davisjam.medium.com/pickleball-secure-deserialization-of-pickle-based-machine-learning-models-a089113e6b0f">Blog</a></div>
+<div class="ln"><a href="https://zenodo.org/records/16974645">Artifact</a><a href="https://davisjam.medium.com/pickleball-secure-deserialization-of-pickle-based-machine-learning-models-a089113e6b0f">Blog</a><a href="https://arxiv.org/pdf/2508.15987">Paper</a></div>
 </div>
 <div class="e">
 <div class="ti">AI Safety in the Eyes of the Downstream Developer: A First Look at Concerns, Practices, and Challenges</div>
 <div class="vn">arXiv</div>
 <div class="note">Looks at AI safety from the downstream developer&#x27;s position — the engineer integrating a model, not the organization training it.</div>
+<div class="ln"><a href="https://arxiv.org/pdf/2503.19444">Paper</a></div>
 </div>
 <div class="e">
 <div class="ti">Software Dependencies 2.0: An Empirical Study of Reuse and Integration of Pre-Trained Models in Open-Source Projects</div>
 <div class="vn">arXiv</div>
 <div class="note">Generalizes dependency thinking to model artifacts: what a dependency is, when the dependency learns.</div>
+<div class="ln"><a href="https://arxiv.org/pdf/2509.06085">Paper</a></div>
 </div>
 <div class="e">
 <div class="ti">&#x27;I see models being a whole other thing&#x27;: An Empirical Study of Pre-Trained Model Naming Conventions and A Tool for Enhancing Naming Consistency</div>
 <div class="vn">Empirical Software Engineering (EMSE)</div>
 <div class="note">Interview study of how engineers reason about pre-trained models as components, including where model naming misleads them.</div>
+<div class="ln"><a href="https://arxiv.org/pdf/2310.01642">Paper</a></div>
 </div>
 <div class="e">
 <div class="ti">Recommending Pre-Trained Models for IoT Devices</div>
 <div class="vn">Proceedings of the 7th International Workshop on Software Engineering Research &amp; Practices for the Internet of Things (SERP4IoT)</div>
 <div class="note">Recommending models for constrained devices, where the reuse decision is bounded by the hardware it has to run on.</div>
+<div class="ln"><a href="https://arxiv.org/pdf/2412.18972">Paper</a></div>
 </div>
 <div class="e">
 <div class="ti">A method for identifying naming mismatches in neural networks based on their architectural properties</div>
@@ -72,37 +85,38 @@
 <div class="ti">Interoperability in Deep Learning: A User Survey and Failure Analysis of ONNX Model Converters</div>
 <div class="vn">Proceedings of the 33rd ACM SIGSOFT International Symposium on Software Testing and Analysis (ISSTA)</div>
 <div class="note">Tested whether ONNX interoperability holds. Conversion failures show that a portability claim is an engineering obligation, not a property.</div>
-<div class="ln"><a href="https://zenodo.org/records/12667479">Artifact</a></div>
+<div class="ln"><a href="https://zenodo.org/records/12667479">Artifact</a><a href="https://arxiv.org/pdf/2303.17708">Paper</a></div>
 </div>
 <div class="e">
 <div class="ti">What do we know about Hugging Face? A systematic literature review and quantitative validation of qualitative claims</div>
 <div class="vn">Proceedings of the 18th ACM/IEEE International Symposium on Empirical Software Engineering and Measurement (ESEM)</div>
 <div class="note">A systematic review and quantitative study of what is known about Hugging Face, consolidating a fast-moving literature.</div>
-<div class="ln"><a href="https://zenodo.org/records/13631840">Artifact</a></div>
+<div class="ln"><a href="https://zenodo.org/records/13631840">Artifact</a><a href="https://arxiv.org/pdf/2406.08205">Paper</a></div>
 </div>
 <div class="e">
 <div class="ti">PeaTMOSS: A Dataset and Initial Analysis of Pre-Trained Models in Open-Source Software</div>
 <div class="vn">Proceedings of the 21st Annual Conference on Mining Software Repositories (MSR)</div>
 <div class="note">PeaTMOSS extends that to models as they appear inside open-source projects, linking the registry to the systems that depend on it.</div>
-<div class="ln"><a href="https://github.com/PurdueDualityLab/PeaTMOSS-Artifact">Artifact</a></div>
+<div class="ln"><a href="https://github.com/PurdueDualityLab/PeaTMOSS-Artifact">Artifact</a><a href="https://arxiv.org/pdf/2402.00699">Paper</a></div>
 </div>
 <div class="e">
 <div class="ti">Challenges and Practices of Deep Learning Model Reengineering: A Case Study on Computer Vision</div>
 <div class="vn">Empirical Software Engineering (EMSE)</div>
 <div class="note">Model reengineering — reimplementing and extending published models — is a distinct and costly engineering activity; this documents what it involves.</div>
-<div class="ln"><a href="https://github.com/Wenxin-Jiang/EMSE-CVReengineering-Artifact">Artifact</a></div>
+<div class="ln"><a href="https://github.com/Wenxin-Jiang/EMSE-CVReengineering-Artifact">Artifact</a><a href="https://link.springer.com/article/10.1007/s10664-024-10521-0">Paper</a></div>
 </div>
 <div class="e">
 <div class="ti">A Partial Replication of MaskFormer in TensorFlow on TPUs for the TensorFlow Model Garden</div>
 <div class="vn">arXiv</div>
 <div class="note">A partial replication across frameworks, which is where interoperability claims are tested rather than stated.</div>
+<div class="ln"><a href="https://arxiv.org/pdf/2404.18801">Paper</a></div>
 </div>
 <div class="yr">2023</div>
 <div class="e">
 <div class="ti">An Empirical Study of Pre-Trained Model Reuse in the Hugging Face Deep Learning Model Registry</div>
 <div class="vn">Proceedings of the ACM/IEEE 45th International Conference on Software Engineering (ICSE)</div>
 <div class="note">The empirical study of Hugging Face reuse that established how engineers select and adapt pre-trained models at ecosystem scale.</div>
-<div class="ln"><a href="https://doi.org/10.5281/zenodo.7555464">Artifact</a><a href="https://medium.com/@davisjam/an-empirical-study-of-pre-trained-model-reuse-in-the-hugging-face-deep-learning-model-registry-6ccfb0e58809">Blog</a></div>
+<div class="ln"><a href="https://doi.org/10.5281/zenodo.7555464">Artifact</a><a href="https://medium.com/@davisjam/an-empirical-study-of-pre-trained-model-reuse-in-the-hugging-face-deep-learning-model-registry-6ccfb0e58809">Blog</a><a href="https://arxiv.org/pdf/2303.02552">Paper</a></div>
 </div>
 <div class="e">
 <div class="ti">Reusing Deep Learning Models: Challenges and Directions in Software Engineering</div>
@@ -113,7 +127,7 @@
 <div class="ti">PTMTorrent: A Dataset for Mining Open-source Pre-trained Model Packages</div>
 <div class="vn">Proceedings of the 20th Annual Conference on Mining Software Repositories — Data and Tool Showcase Track (MSR-Data’23)</div>
 <div class="note">PTMTorrent made the model ecosystem minable, so claims about it could be measured instead of asserted.</div>
-<div class="ln"><a href="https://doi.org/10.5281/zenodo.7570357">Artifact</a><a href="https://medium.com/@davisjam/an-empirical-study-of-pre-trained-model-reuse-in-the-hugging-face-deep-learning-model-registry-6ccfb0e58809">Blog</a></div>
+<div class="ln"><a href="https://doi.org/10.5281/zenodo.7570357">Artifact</a><a href="https://medium.com/@davisjam/an-empirical-study-of-pre-trained-model-reuse-in-the-hugging-face-deep-learning-model-registry-6ccfb0e58809">Blog</a><a href="https://arxiv.org/pdf/2303.08934">Paper</a></div>
 </div>
 <div class="yr">2022</div>
 <div class="e">
@@ -126,6 +140,7 @@
 <div class="ti">Discrepancies among Pre-trained Deep Neural Networks: A New Threat to Model Zoo Reliability</div>
 <div class="vn">Proceedings of the 30th ACM Joint Meeting on European Software Engineering Conference and Symposium on the Foundations of Software Engineering: Ideas, Visions, and Reflections track (ESEC/FSE-IVR)</div>
 <div class="note">Found that nominally identical pre-trained models from model zoos differ, which makes a model zoo a supply chain rather than a catalogue.</div>
+<div class="ln"><a href="https://docs.lib.purdue.edu/cgi/viewcontent.cgi?article=1181&amp;context=ecepubs">Paper</a></div>
 </div>
 <div class="e">
 <div class="ti">“If security is required”: Engineering and Security Practices for Machine Learning-based IoT Devices</div>
@@ -138,6 +153,7 @@
 <div class="ti">An Experience Report on Machine Learning Reproducibility: Guidance for Practitioners and TensorFlow Model Garden Contributors</div>
 <div class="vn">arXiv</div>
 <div class="note">Turned the reproducibility problem into guidance practitioners could apply.</div>
+<div class="ln"><a href="https://arxiv.org/pdf/2107.00821">Paper</a></div>
 </div>
 <div class="yr">In preparation</div>
 <div class="e">
@@ -158,12 +174,12 @@
 <dt>Google, LLC</dt><dd>Unrestricted Gift: Machine Learning Reproducibility</dd>
 <dt>Google, LLC</dt><dd>Unrestricted Gift: Research on Machine Learning Reproducibility</dd>
 </dl>
+</main>
+</div>
 <footer class="site">
   <p><a href="https://davisjam.github.io/research/">&larr; All research</a></p>
-  <p><a href="https://davisjam.github.io/">James Davis</a> ·
-     <a href="https://davisjam.github.io/publications/">Publications</a> ·
-     <a href="https://davisjam.github.io/teaching/">Teaching</a></p>
+  <p>Duality Lab &middot; Elmore Family School of Electrical and Computer
+     Engineering &middot; Purdue University</p>
 </footer>
-</div>
 </body>
 </html>
